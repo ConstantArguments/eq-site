@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Erics PhotoShop images of dropped vehicles. Extra Low">
+<meta name="author" content="ConstantArguments">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get Low with Eric Quach</title>
+<link rel="stylesheet" type="text/css" href="_css/dropproject.css">
+<link href="https://fonts.googleapis.com/css?family=Just+Another+Hand|Ubuntu:400,700" rel="stylesheet">
+</head>
+<body>
+  <header id="top" role="banner">
+   <div class="content-wrap">
+    <nav role="navigation">
+      <div class="navbar">
+        <div class="dropdown">
+          <button class="dropbtn" onclick="myFunction()">Menu
+          </button>
+          <div class="dropdown-content" id="myDropdown">
+            <a href="index.html">Main</a>
+            <a href="vans.html">Vans</a>
+            <a href="apple.html">Apple</a>
+            <a href="lexus.html">Lexus</a>
+            <a href="cityharvest.html">City Harvest</a>
+            <a href="pimco.html">Pimco</a>
+            <a href="americanrc.html">American Red Cross</a>
+            <a href="diapergenie.html">Diaper Genie</a>
+            <a href="mutant.html">Mutant Vehicles</a>
+            <a href="drawings.html">Drawings</a>
+            <a href="doodles.html">Doodles</a>
+            <a href="dropproject.html">The Drop Project</a>
+            <a href="whois.html">Who is Eric Quach?</a>
+          </div>
+        </div>
+       </div>
+      </nav>
+      <h1>Eric Quach</h1>
+      <h2>The Drop Project</h2>
+    </div>
+  </header>
+<main role="main">
+  <div class="content-wrap">
+    <section>
+      <div class="column-narrow">
+        <p>See what it is. Think of what it could be. We work on cars during the day to express what they are, and we work on cars at night to explore what they could be. Let’s drop a Lexus!</p>
+        <p>Click <a class="link-out" href="http://photoshopdropped.tumblr.com/" title="Drop Project Tumblr">here</a> to see the full line of dropped vehicles.</p>
+      </div>
+      <div class="column-wide">
+        <a class="link-out" href="http://photoshopdropped.tumblr.com/" title="Drop Project Tumblr">
+        <img src="_images/campaigns/drop-project/drop-project.jpg" alt="preview of gallery">
+        </a>
+      </div>
+    </section>
+  </div>
+</main>
+<footer role="contentinfo">
+  <div class="content-wrap">
+  <a class="top-btn" href="#top" title="to top">top</a>
+  </div>
+</footer>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>  
+</body>
+</html>

@@ -1,0 +1,249 @@
+/* Color pallet and fonts 
+hsl(265, 58%, 25%)
+hsl(173, 88%, 39%)
+
+font-family: 'Just Another Hand', cursive;
+font-family: 'Ubuntu', sans-serif;
+-----------------------------*/
+
+/* Global
+-----------------------------*/
+html{
+  font-size: 16px;
+  color: hsl(265, 58%, 25%);
+  font-family: 'Ubuntu', sans-serif;
+/*  background: hsl(173, 88%, 39%);*/
+}
+/* vvv start border box fix vvv---- */
+  /* apply a natural box layout model to all elements, but allowing conponents to change */
+html {
+  box-sizing: border-box;
+  }
+  *, *:before, *:after{
+  box-sizing: inherit;
+  }
+.content-wrap {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 10px 50px 10px;
+}
+article {
+  margin-bottom: 70px;
+}
+
+/* Header
+-----------------------------*/
+header .content-wrap {
+  padding: 30px 30px 0;
+}
+h1 {
+  background: hsl(265, 58%, 25%);
+  color: hsl(173, 88%, 39%);
+  font-size: 1.4rem;
+  text-align: right;
+  margin: 1px 0;
+  padding: 2px 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
+  position: relative;
+  animation: h1move 2s 1;
+  animation-timing-function: ease-out;
+}
+@keyframes h1move {
+  from {right: -1000px;}
+  to {right: 0px;}
+}
+header h2 {
+  font-size: 4rem;
+  font-style: italic;
+  margin: 5px 0;
+  border-top: 15px solid hsl(173, 88%, 39%);
+  border-bottom: 10px solid hsl(173, 88%, 39%);
+  position: relative;
+  animation: h2move 2s 1;
+  animation-timing-function: ease-out;
+}
+@keyframes h2move {
+  from {left: -1000px;}
+  to {left: 0px;}
+}
+header p {
+  text-align: justify;
+  margin: 5px 0 5px;
+}
+/* Navigation */
+
+.navbar {
+  width: 59px;
+  overflow: hidden;
+  background-color: hsl(265, 58%, 25%);
+  font-family: 'Ubuntu', sans-serif;
+  font-variant: small-caps;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
+}
+
+.navbar a {
+  float: left;
+  font-size: 1.2rem;
+  color: hsl(173, 88%, 39%);
+  text-align: center;
+  padding: 8px 8px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  cursor: pointer;
+  font-size: 1.2rem;  
+  border: none;
+  outline: none;
+  color: hsl(173, 88%, 39%);
+  padding: 8px 8px;
+  background-color: inherit;
+  font-family: 'Ubuntu', sans-serif;
+  font-variant: small-caps;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+  filter: blur(2px);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  color: hsl(265, 58%, 25%);
+  background-color: hsl(173, 88%, 39%, .95);
+  min-width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.7);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: hsl(265, 58%, 25%);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: hsl(265, 58%, 25%, .2);
+  filter: none;
+}
+
+.show {
+  display: block;
+}
+
+/* Main 
+-----------------------------*/
+h3 + p {
+  text-align: justify;
+  margin-bottom: 25px;
+}
+div.polaroid {
+  width: 80%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
+  margin: 0 auto;
+}
+
+div.pic-container {
+  background-color: white;
+  text-align: center;
+  padding: 5px;
+  font-family: 'Just Another Hand', cursive;
+  font-style: italic;
+  font-size: 1.7rem;
+}
+.polaroid img {
+  width: 98%;
+  border: 1px solid black;
+  margin: 1%;
+}
+.polaroid object {
+  width: 98%;
+  border: 1px solid black;
+  margin: 1%;
+}
+.polaroid iframe {
+  width: 98%;
+  height: 98%;
+  border: 1px solid black;
+  margin: 1%;
+}
+
+.polaroid:nth-of-type(6n+1) {
+  transform: rotate(3deg);
+}
+.polaroid:nth-of-type(6n+2) {
+  transform: rotate(-1deg);
+}
+.polaroid:nth-of-type(6n+3) {
+  transform: rotate(4deg);
+}
+.polaroid:nth-of-type(6n+4) {
+  transform: rotate(-3deg);
+}
+.polaroid:nth-of-type(6n+5) {
+  transform: rotate(1deg);
+}
+.polaroid:nth-of-type(6n+6) {
+  transform: rotate(-4deg);
+}
+
+#you-hid {
+  position: absolute;
+/*  width: 100%;*/
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+#you-hid:hover {
+  opacity: 1;
+  transition: .3s ease;
+}
+#ipad-b {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+#ipad-b:hover {
+  opacity: 1;
+  transition: 1s ease;
+}
+ 
+/* Footer 
+----------------------------*/
+footer {
+  max-width: 950px;
+  margin: 20px auto 50px;
+}
+footer a{
+  display: block;
+  width: 80px;
+  background: hsl(265, 58%, 25%);
+  color: hsl(173, 88%, 39%);
+  border: 2px solid hsl(265, 58%, 25%);
+  border-radius: 50%;
+  padding: 6px 5px;
+  margin: 1px;
+  text-decoration: none;
+  text-align: center;
+  font-variant: small-caps;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
+}
+footer a:hover {
+  filter: grayscale(100%) blur(2px)
+}

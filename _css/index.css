@@ -1,0 +1,155 @@
+/* Color Pallet and fonts
+hsl(265, 58%, 25%)
+hsl(173, 88%, 39%)
+
+font-family: 'Just Another Hand', cursive;
+font-family: 'Ubuntu', sans-serif;
+--------------------------------------*/
+
+/* Global styles
+--------------------------------------*/
+html {
+  font-size: 16px;
+  color: hsl(265, 58%, 25%);
+  font-family: 'Ubuntu', sans-serif;
+/*  background: hsl(173, 88%, 39%);*/
+}
+  /* vvv start border box fix vvv---- */
+  /* apply a natural box layout model to all elements, but allowing conponents to change */
+html {
+  box-sizing: border-box;
+  }
+  *, *:before, *:after{
+  box-sizing: inherit;
+  }
+  /* ^^^ end of border box fix ^^^---- */
+.content-wrap {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 30px 50px 10px;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* header
+--------------------------------*/
+.index-image {
+  border-radius: 50%;
+  filter: hue-rotate(265deg);
+  max-width: 100%;
+  display: block;
+}
+.header-column-narrow {
+  max-width: 30%;
+  float: left;
+  border: 8px solid hsl(265, 58%, 25%);
+  border-radius: 50%;
+  margin: 0 2% 2% 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
+  position: relative;
+  animation: imgmove 2s 1;
+  animation-timing-function: ease-out;
+}
+@keyframes imgmove {
+  from {left: -1000px;}
+  to {left: 0;}
+}
+.header-column-wide {
+  max-width: 68%;
+/*  min-width: 210px;*/
+  float: left;
+  position: relative;
+  text-align: justify;
+  border-top: 24px solid hsl(265, 58%, 25%);
+}
+h1 {
+  text-align: right;
+  font-size: 3.4rem;
+  margin: 4px 0;
+  padding: 0 7px 7px;
+  line-height: .9;
+  font-style: italic;
+  border-top: 15px solid hsl(173, 88%, 39%);
+  border-bottom: 10px solid hsl(173, 88%, 39%);
+  position: relative;
+  animation: h1move 2s 1;
+  animation-timing-function: ease-out;
+}
+@keyframes h1move {
+  from {right: -1000px;}
+  to {right: 0px;}
+}
+h2 {
+  font-variant: small-caps;
+  font-size: 1.5rem;
+  margin: 5px 5px;
+}
+header p {
+  font-size: 1rem;
+  padding-left: 21%;
+}
+/* main 
+--------------------------------*/
+main {
+  max-width: 950px;
+  margin: 0 auto;
+}
+/* navigation */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: hsl(265, 58%, 25%, 1);
+  border: 24px solid hsl(265, 58%, 25%);
+  border-radius: 24px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
+}
+
+.flex-container > div {
+  background-color: hsl(173, 88%, 39%);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 50%;
+}
+/* nav images */
+.flex-container img {
+  width: 200px;
+  border-radius: 50%;
+  filter: hue-rotate(265deg);
+  display: block;
+}
+.flex-container img:hover {
+  filter: invert(100%) blur(1px);
+}
+
+/* footer
+----------------------------------*/
+footer {
+  max-width: 950px;
+  margin: 20px auto 50px;
+}
+footer h2 {
+  font-family: 'Just Another Hand', cursive;
+  font-size: 2rem;
+  text-align: center;
+  margin: 10px auto 0;
+}
+.contact-info {
+  text-align: center;
+  width: 100%;
+}
+.contact-info a {
+  background: hsl(173, 88%, 39%);
+  font-size:.79rem;
+  padding: 17px;
+  border: 6px solid hsl(265, 58%, 25%);
+  border-radius: 50%;
+  color: hsl(265, 58%, 25%);
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
+}
+.contact-info a:hover {
+  filter: grayscale(100%) blur(2px);
+}
